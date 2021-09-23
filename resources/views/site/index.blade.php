@@ -53,7 +53,6 @@
 
     <h3 class="tituloBanner">DESCUBRE LA COLECCIÓN</h3>
 
-         
     </section>
     <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta" style="padding-top:4rem;padding-bottom:4rem;">
         <h1 class="titular">PAÑUELOS DE SEDA ARTESANALES</h1>

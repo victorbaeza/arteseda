@@ -71,7 +71,18 @@
         }
 
         .foto {
+
             filter: drop-shadow(-6px 6px 25px rgba(0, 0, 0, 0.5));
+        }
+
+        #imagenPrincipal {
+            height: 25rem;
+            object-position: center;
+        }
+
+        #imagenSecundaria {
+            margin-top: 3rem;
+            height: 40rem;
         }
 
         .envio {
@@ -86,20 +97,18 @@
         #datosProducto {
             position: absolute;
             bottom: 5rem;
-            margin-left: 2rem;
             left: 0;
             z-index: 6;
         }
 
         .carrusel {
-            object-fit: none;
-            height: 60rem;
+            object-fit: contain;
             width: auto;
         }
 
         #container {
             height: 60rem;
-            width: 75vh;
+            width: 40%;
             background-image: linear-gradient(to right, #ECEAE6, #ECEAE6, rgba(0, 0, 0, 0));
             background-color: ;
             position: absolute;
@@ -111,17 +120,37 @@
             position: relative;
             z-index: 6;
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            height: 7rem;
         }
 
         .pagina {
 
             font-family: "Anton", Sans-serif;
-            font-size: 30rem;
+            font-size: 20rem;
             position: absolute;
             font-weight: bold;
             right: 10rem;
+            top: 2rem;
             color: #f0efec;
             transition: .5s ease-in-out;
+        }
+
+        .pagina2 {
+            z-index:2;
+            font-size: 1.5rem;
+            position: absolute;
+            font-weight:500;
+            right: 1rem;
+            text-shadow: 5px 5px 10px #00000059;
+            bottom: 1rem;
+            transition: .5s ease-in-out;
+            text-shadow: 5px 5px 20px #00000059;
+            /* font-family: "SangBleu Kingdom Light","Book Antiqua",Palatino,Georgia,serif; */
+            color: black;
+            margin-left: 10rem;
+
+            text-transform: uppercase;
         }
 
         .letfSide,
@@ -144,7 +173,7 @@
 
 
         #imagenesRelacionados {
-            widht: auto;
+            width: auto;
             height: 20rem;
             margin: 0.5rem;
             object-fit: contain;
@@ -182,41 +211,47 @@
         }
 
         .home-mast__container2>*:hover {
-            
+
             flex-grow: 10;
         }
 
-      
+
 
         .relacionados {
             background-repeat: none;
             background-size: 100% auto;
+        }
+
+        .owl-carousel,
+        .owl-stage {
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
 
 <body style="background-color:#ECEAE6">
     <!-- transform: translate3d(60rem, 0px, 0px) -->
-    <section style="position:relative;z-index:0">
-
-        <div class="row ">
-
-
-            <div class="container" id="container">
-
-            </div>
-            <div class="owl-carousel" id="owl-carousel" style="z-index:1;height:60rem;overflow:hidden;padding-top:2rem">
-
-                <div class="primera"> <img class="carrusel foto" src="{{asset('/storage/'. $product->photo_principal)}}" alt=""> </div>
-
-                <div> <img class="carrusel foto" style="z-index:0;object-position: bottom;" src="{{asset('/storage/'. $product->Photos->first()->path)}}" alt=""> </div>
+    <section id="seccionPrincipal" style="position:relative;z-index:0;background-color:rgb(245, 238, 223)">
 
 
 
-            </div>
 
-            <h1 class="pagina">1/2</h1>
+        <div class="container" id="container">
+
         </div>
+        <div class="owl-carousel" id="owl-carousel" style="z-index:1;">
+
+            <div class="primera"> <img class="carrusel foto" id="imagenPrincipal" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" style="z-index:1" alt=""> </div>
+
+            <div> <img class="carrusel foto" id="imagenSecundaria" style="z-index:0;object-position: bottom;" style="z-index:1" src="{{asset('/storage/products/images/'. $product->Photos->first()->path)}}" alt=""> </div>
+
+
+
+        </div>
+
+        <h1 class="pagina">1/2</h1>
+        <h51 class="pagina2">1/2</h51>
         <div class="container" id="datosProducto">
             <h1 class="titular">{{$product->Category->name}}</h1>
             <h1 class="titular">{{$product->name}}</h1>
@@ -227,7 +262,7 @@
 
     </section>
 
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta separador" id="" style="background-color:white;height:10rem">
+    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta separador" id="" style="">
 
     </section>
 
@@ -280,19 +315,21 @@
                 margin: -200,
 
             }).on('changed.owl.carousel', function(event) {
-                console.log($(".pagina").text());
+
                 var text = $(".pagina").text();
                 if (text == "1/2") {
                     $(".pagina").text("2/2");
-                    $("body").css("background-color","rgb(245 238 223)");
-                    $(".pagina").css("color","rgb(243 233 211)");
-                    $("#container").css("background-image","linear-gradient(to right, rgb(245 238 223), rgb(245 238 223), rgba(0, 0, 0, 0)");
+                    $(".pagina2").text("2/2");
+                    $("#seccionPrincipal").css("background-color", "rgb(245 238 223)");
+                    $(".pagina").css("color", "rgb(243 233 211)");
+                    $("#container").css("background-image", "linear-gradient(to right, rgb(245 238 223), rgb(245 238 223), rgba(0, 0, 0, 0)");
 
                 } else {
                     $(".pagina").text("1/2");
-                    $("body").css("background-color","#ECEAE6");
-                    $(".pagina").css("color","#f0efec");
-                    $("#container").css("background-image","linear-gradient(to right, #ECEAE6, #ECEAE6, rgba(0, 0, 0, 0)");
+                    $(".pagina2").text("1/2");
+                    $("#seccionPrincipal").css("background-color", "#ECEAE6");
+                    $(".pagina").css("color", "#f0efec");
+                    $("#container").css("background-image", "linear-gradient(to right, #ECEAE6, #ECEAE6, rgba(0, 0, 0, 0)");
                 }
 
 
