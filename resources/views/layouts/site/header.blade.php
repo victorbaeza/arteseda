@@ -65,7 +65,10 @@ width: 100%;">
                 <a class="nav-link menu blanco" href="/products">Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link menu blanco" href="/products">Consulta</a>
+                <a class="nav-link menu blanco" href="/products">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link menu blanco" href="/products">Consulta</a>
             </li>
      
         </ul>

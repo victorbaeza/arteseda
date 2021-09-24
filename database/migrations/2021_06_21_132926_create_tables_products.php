@@ -113,6 +113,11 @@ class CreateTablesProducts extends Migration
           $table->string('description');
           $table->longText('long_description')->nullable();
 
+          $table->string("color")->nullable();
+          $table->string("medidas")->nullable();
+          $table->string("material")->nullable();
+          $table->string("procedencia")->nullable();
+
           $table->string('data_sheet_text')->nullable();
           $table->string('tests_text')->nullable();
           $table->string('certification_text')->nullable();

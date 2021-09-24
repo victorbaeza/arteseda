@@ -33,6 +33,34 @@
                           @endforeach
                       </div>
                       <div class="form-group">
+                          <label><b>Color<span class="text-danger">*</span></b></label>
+                          @foreach($languages as $lang)
+                              <textarea name="{{$lang}}_description" class="form-control @if(!$loop->first) d-none @endif js-translatable"
+                                        data-lang="{{$lang}}">{{old($lang.'_color', (isset($product) && $product->translate($lang)) ? $product->translate($lang)->color : null)}}</textarea>
+                          @endforeach
+                      </div>
+                      <div class="form-group">
+                          <label><b>Medidas<span class="text-danger">*</span></b></label>
+                          @foreach($languages as $lang)
+                              <textarea name="{{$lang}}_description" class="form-control @if(!$loop->first) d-none @endif js-translatable"
+                                        data-lang="{{$lang}}">{{old($lang.'_medidas', (isset($product) && $product->translate($lang)) ? $product->translate($lang)->medidas : null)}}</textarea>
+                          @endforeach
+                      </div>
+                      <div class="form-group">
+                          <label><b>Material<span class="text-danger">*</span></b></label>
+                          @foreach($languages as $lang)
+                              <textarea name="{{$lang}}_description" class="form-control @if(!$loop->first) d-none @endif js-translatable"
+                                        data-lang="{{$lang}}">{{old($lang.'_material', (isset($product) && $product->translate($lang)) ? $product->translate($lang)->material : null)}}</textarea>
+                          @endforeach
+                      </div>
+                      <div class="form-group">
+                          <label><b>Procedencia<span class="text-danger">*</span></b></label>
+                          @foreach($languages as $lang)
+                              <textarea name="{{$lang}}_description" class="form-control @if(!$loop->first) d-none @endif js-translatable"
+                                        data-lang="{{$lang}}">{{old($lang.'_procedencia', (isset($product) && $product->translate($lang)) ? $product->translate($lang)->procedencia : null)}}</textarea>
+                          @endforeach
+                      </div>
+                      <div class="form-group">
                         <div class="row">
                           <div class="col-4">
                               <label><b>Unidades en caja</b></label>

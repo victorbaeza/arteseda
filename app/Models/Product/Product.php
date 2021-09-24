@@ -119,6 +119,12 @@ class Product extends BaseModel implements TranslatableContract, Buyable
     }
 
     //endregion Relationships
+    public function getDescription()
+    {
+        if ($this->Parent) return $this->Parent->long_description;
+
+        return $this->long_description;
+    }
 
     public function getSlug()
     {
@@ -126,6 +132,8 @@ class Product extends BaseModel implements TranslatableContract, Buyable
 
         return $this->slug;
     }
+    
+  
 
     public static function assignSlug(string $name,int $id = 0) : string
     {

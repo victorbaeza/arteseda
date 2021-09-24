@@ -47,23 +47,51 @@
             height: 50rem;
             background-color: #ECEAE6;
             position: relative;
-
+            padding:2rem;
             background-repeat: no-repeat;
             background-size: 100% auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #owl-carousel2 {
+            display: flex;
+            justify-content: center;
+        
+        }
+        .owl-carousel{
+            width: 100%;
+            margin-right: 2rem;
         }
     </style>
 </head>
 
 <body style="background-color:#ECEAE6">
     <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal">
+        <div class="owl-carousel" id="owl-carousel2" style="z-index:1;">
+            @foreach($products as $product)
 
+            <div class="imagenRelacionados" data-nombre="{{$product->name}}" data-imagen="{{$product->Photos->get(1)->path}}">
+                <a href="/products/{{$product->getSlug()}}"> <img class="d-block w-100" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" alt="{{$product->name}}"></a>
+            </div>
+
+
+
+            @endforeach
+
+
+
+
+        </div>
 
 
 
     </section>
     <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta" style="padding-top:4rem;padding-bottom:4rem;">
         <h1 class="titular">PAÑUELOS DE SEDA ARTESANALES</h1>
+
     </section>
+    <script src="/vendor/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
             var menu = document.getElementsByClassName("menu");
@@ -73,30 +101,52 @@
                 $("#logo").attr("src", "{{asset('/storage/negro.png')}}");
             }
         });
-        
     </script>
-        <script>
-    window.onscroll = function() {
-        myFunction()
-    };
+    <script>
+        $(document).ready(function() {
+            $("#owl-carousel2").owlCarousel({
+                margin: 200,
+                center:true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 3,
+                        nav: true
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        loop: true,
 
-    var header = document.getElementById("header");
-   
-    var sticky = header.offsetTop;
+                    }
+                }
+            })
+        });
+        window.onscroll = function() {
+            myFunction()
+        };
 
-    function myFunction() {
+        var header = document.getElementById("header");
 
-        
-        if (window.pageYOffset > sticky) {
-            header.classList.remove("absolute");
-            header.classList.add("sticky");
-            
-        } else {
-            header.classList.remove("sticky");
-            header.classList.add("absolute");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+
+
+            if (window.pageYOffset > sticky) {
+                header.classList.remove("absolute");
+                header.classList.add("sticky");
+
+            } else {
+                header.classList.remove("sticky");
+                header.classList.add("absolute");
+            }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>

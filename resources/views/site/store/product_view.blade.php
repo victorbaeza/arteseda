@@ -77,14 +77,14 @@
 
         #imagenPrincipal {
             height: 50vh;
-         
+
             object-position: center;
         }
 
         #imagenSecundaria {
             margin-top: 3rem;
             height: 70vh;
-      
+
         }
 
         .envio {
@@ -248,7 +248,6 @@
             margin-bottom: 1rem;
 
         }
-
     </style>
 </head>
 
@@ -298,73 +297,16 @@
 
                         <div class="owl-carousel" id="owl-carousel2" style="z-index:1;">
                             @foreach(ProductCategory::find($product->Category->id)->Products as $productRelacionado)
-
                             <div class="imagenRelacionados" data-nombre="{{$productRelacionado->name}}" data-imagen="{{$productRelacionado->Photos->get(1)->path}}">
                                 <img class="d-block w-100" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" alt="Third slide">
                             </div>
-
-
-
                             @endforeach
-
-
-
-
                         </div>
-
-                        <!--   <section id="">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-inner">
-
-                                @php
-                                $i=0
-                                @endphp
-                                @foreach(ProductCategory::find($product->Category->id)->Products as $productRelacionado)
-                                @if($i==0)
-
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" alt="Third slide">
-                                </div>
-                                @else
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{asset('/storage/products/images/'. $productRelacionado->photo_principal)}}" alt="">
-                                </div>
-                                @endif
-
-                                @php
-                                $i++
-                                @endphp
-                                @endforeach
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </section> -->
-                        <!--       <section class="home-mast">
-                    <div class="home-mast__container2">
-                        @foreach(ProductCategory::find($product->Category->id)->Products as $productRelacionado)
-                        <div class="relacionados" style=" background-image:url(http://arteseda/storage/products/images/{{$productRelacionado->photo_principal}})" data-nombre="{{$productRelacionado->name}}">
-                            <div class="absolute-bg" style="display: flex;justify-content: center;align-content: center;flex-direction: column;align-items: center;background-image:'{{asset('/storage/'. $productRelacionado->photo_principal)}}'">
-                                <h3 id="bus" style="font-weight:bold;font-size:3rem;"> </h3>
-                                <p class="pe"></p>
-                            </div>
-
-                        </div>
-                        @endforeach
-                    </div>
-                </section> -->
-
+                        <p class="relacionadosTitular">{{$product->getDescription()}}</p>
                 </div>
             </div>
             <div class="col no-gutters">
+
                 <div class="rightSide" style=" background-image:url(http://arteseda/storage/products/images/{{$product->Photos->get(1)->path}})">
 
 
