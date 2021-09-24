@@ -76,13 +76,15 @@
         }
 
         #imagenPrincipal {
-            height: 25rem;
+            height: 50vh;
+         
             object-position: center;
         }
 
         #imagenSecundaria {
             margin-top: 3rem;
-            height: 40rem;
+            height: 70vh;
+      
         }
 
         .envio {
@@ -107,7 +109,7 @@
         }
 
         #container {
-            height: 60rem;
+            height: 100%;
             width: 40%;
             background-image: linear-gradient(to right, #ECEAE6, #ECEAE6, rgba(0, 0, 0, 0));
             background-color: ;
@@ -119,33 +121,33 @@
         .separador {
             position: relative;
             z-index: 6;
-            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1), 0px -5px 10px rgba(0, 0, 0, 0.1);
+
             background-color: white;
-            height: 7rem;
+            height: 7vh;
         }
 
         .pagina {
 
             font-family: "Anton", Sans-serif;
-            font-size: 20rem;
+            font-size: 40rem;
             position: absolute;
             font-weight: bold;
-            right: 10rem;
-            top: 2rem;
+            right: 25rem;
+            bottom: 1rem;
             color: #f0efec;
             transition: .5s ease-in-out;
         }
 
         .pagina2 {
-            z-index:2;
+            z-index: 2;
             font-size: 1.5rem;
             position: absolute;
-            font-weight:500;
+            font-weight: 500;
             right: 1rem;
             text-shadow: 5px 5px 10px #00000059;
             bottom: 1rem;
             transition: .5s ease-in-out;
-            text-shadow: 5px 5px 20px #00000059;
+            text-shadow: 5px 5px 5px #0000006d;
             /* font-family: "SangBleu Kingdom Light","Book Antiqua",Palatino,Georgia,serif; */
             color: black;
             margin-left: 10rem;
@@ -157,17 +159,23 @@
         .rightSide {
             height: 70vh;
             width: 100%;
+            overflow: hidden;
         }
 
         .letfSide {
+            position: relative;
             background-color: white;
             padding-top: 2rem;
+            border-radius: 50px 0px 0px 00px;
+            box-shadow: inset 0px 9px 10px 0px rgba(0, 0, 0, 0.1);
         }
 
         .rightSide {
+            background-color: beige;
             background-repeat: no-repeat;
             background-size: 100% auto;
             transition: all 0.5s cubic-bezier(0.59, -0.18, 0.63, 1.32) 0s;
+            box-shadow: inset 0px 9px 10px 0px rgba(0, 0, 0, 0.1);
         }
 
 
@@ -189,7 +197,7 @@
             width: 100%;
             background-position: 20%;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             overflow: hidden;
         }
 
@@ -199,8 +207,7 @@
 
         .home-mast__container2 {
             display: flex;
-            height: 100%;
-            flex-direction: column;
+            height: 20rem;
         }
 
         .home-mast__container2>* {
@@ -218,7 +225,7 @@
 
 
         .relacionados {
-            background-repeat: none;
+            background-repeat: no-repeat;
             background-size: 100% auto;
         }
 
@@ -226,13 +233,28 @@
         .owl-stage {
             display: flex;
             align-items: center;
+
         }
+
+        #owl-carousel2 {
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
+
+        .relacionadosTitular {
+
+            margin-left: 10rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+
+        }
+
     </style>
 </head>
 
-<body style="background-color:#ECEAE6">
+<body style="background-color:white">
     <!-- transform: translate3d(60rem, 0px, 0px) -->
-    <section id="seccionPrincipal" style="position:relative;z-index:0;background-color:rgb(245, 238, 223)">
+    <section id="seccionPrincipal" style="position:relative;z-index:0;background-color:rgb(245, 238, 223);border-radius: 0px 0px 0px 50px;box-shadow: inset 0px -9px -10px 0px rgba(0, 0, 0, 0.1);">
 
 
 
@@ -250,7 +272,7 @@
 
         </div>
 
-        <h1 class="pagina">1/2</h1>
+        <h1 class="pagina">1</h1>
         <h51 class="pagina2">1/2</h51>
         <div class="container" id="datosProducto">
             <h1 class="titular">{{$product->Category->name}}</h1>
@@ -265,21 +287,71 @@
     <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta separador" id="" style="">
 
     </section>
+    <section>
+        <div class="row no-gutters">
+            <div class="col no-gutters" style="overflow:hidden">
+                <div class="letfSide">
 
-    <div class="row no-gutters">
-        <div class="col no-gutters">
-            <div class="letfSide">
-                <h1 id="relacionadosTitular"></h1>
+                    <h4 class="relacionadosTitular">Detalles del producto</h6>
+                        <h6 id="relacionadosTitular" class="relacionadosTitular" style=" font-size: 0.9rem;"><strong id="colorProducto">Color: </strong>{{$product->name}}</h6>
 
 
-            </div>
-        </div>
-        <div class="col no-gutters">
-            <div class="rightSide">
-                <section class="home-mast">
+                        <div class="owl-carousel" id="owl-carousel2" style="z-index:1;">
+                            @foreach(ProductCategory::find($product->Category->id)->Products as $productRelacionado)
+
+                            <div class="imagenRelacionados" data-nombre="{{$productRelacionado->name}}" data-imagen="{{$productRelacionado->Photos->get(1)->path}}">
+                                <img class="d-block w-100" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" alt="Third slide">
+                            </div>
+
+
+
+                            @endforeach
+
+
+
+
+                        </div>
+
+                        <!--   <section id="">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-inner">
+
+                                @php
+                                $i=0
+                                @endphp
+                                @foreach(ProductCategory::find($product->Category->id)->Products as $productRelacionado)
+                                @if($i==0)
+
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" alt="Third slide">
+                                </div>
+                                @else
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{asset('/storage/products/images/'. $productRelacionado->photo_principal)}}" alt="">
+                                </div>
+                                @endif
+
+                                @php
+                                $i++
+                                @endphp
+                                @endforeach
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section> -->
+                        <!--       <section class="home-mast">
                     <div class="home-mast__container2">
                         @foreach(ProductCategory::find($product->Category->id)->Products as $productRelacionado)
-                        <div class="relacionados" style=" background-image:url(http://arteseda/storage/{{$productRelacionado->photo_principal}})" data-nombre="{{$productRelacionado->name}}">
+                        <div class="relacionados" style=" background-image:url(http://arteseda/storage/products/images/{{$productRelacionado->photo_principal}})" data-nombre="{{$productRelacionado->name}}">
                             <div class="absolute-bg" style="display: flex;justify-content: center;align-content: center;flex-direction: column;align-items: center;background-image:'{{asset('/storage/'. $productRelacionado->photo_principal)}}'">
                                 <h3 id="bus" style="font-weight:bold;font-size:3rem;"> </h3>
                                 <p class="pe"></p>
@@ -288,11 +360,25 @@
                         </div>
                         @endforeach
                     </div>
-                </section>
+                </section> -->
+
+                </div>
+            </div>
+            <div class="col no-gutters">
+                <div class="rightSide" style=" background-image:url(http://arteseda/storage/products/images/{{$product->Photos->get(1)->path}})">
+
+
+                    <div class="relacionados" data-nombre="{{$productRelacionado->name}}">
+                        <div class="absolute-bg" style="display: flex;justify-content: center;align-content: center;flex-direction: column;align-items: center;background-image:'{{asset('/storage/'. $productRelacionado->photo_principal)}}'">
+                            <h3 id="bus" style="font-weight:bold;font-size:3rem;"> </h3>
+                            <p class="pe"></p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
     <script src="/vendor/js/owl.carousel.min.js"></script>
     <script>
 
@@ -303,7 +389,27 @@
 
             $("#relacionadoNombre").text($(this).data("nombre"));
         });
+        $(document).ready(function() {
+            $("#owl-carousel2").owlCarousel({
+                margin: 20,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 3,
+                        nav: true
+                    },
+                    1000: {
+                        items: 5,
+                        nav: true,
 
+                    }
+                }
+            })
+        });
 
 
         $(document).ready(function() {
@@ -317,15 +423,15 @@
             }).on('changed.owl.carousel', function(event) {
 
                 var text = $(".pagina").text();
-                if (text == "1/2") {
-                    $(".pagina").text("2/2");
+                if (text == "1") {
+                    $(".pagina").text("2");
                     $(".pagina2").text("2/2");
                     $("#seccionPrincipal").css("background-color", "rgb(245 238 223)");
                     $(".pagina").css("color", "rgb(243 233 211)");
                     $("#container").css("background-image", "linear-gradient(to right, rgb(245 238 223), rgb(245 238 223), rgba(0, 0, 0, 0)");
 
                 } else {
-                    $(".pagina").text("1/2");
+                    $(".pagina").text("1");
                     $(".pagina2").text("1/2");
                     $("#seccionPrincipal").css("background-color", "#ECEAE6");
                     $(".pagina").css("color", "#f0efec");
@@ -337,8 +443,12 @@
             })
         });
 
-        $(".relacionados").hover(function() {
+        $(".imagenRelacionados").hover(function() {
+
+            console.log("url(http://arteseda/storage/products/images/" + $(this).data("imagen") + ")");
             $("#relacionadosTitular").text($(this).data("nombre"));
+            $(".rightSide").css("background-image", "url(http://arteseda/storage/products/images/" + $(this).data("imagen") + ")");
+
         });
 
 
