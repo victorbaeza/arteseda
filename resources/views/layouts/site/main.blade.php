@@ -33,6 +33,7 @@
   <meta name=twitter:description content="@if(isset($description)){{$description}}@else @lang('seo.descriptions.main') @endif">
   <meta name=twitter:image content="@section('tw_image')  @show">
   <meta name=twitter:site content=@twitter>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
 
 
@@ -45,6 +46,7 @@
   <link rel="stylesheet" media="screen" href="/css/main.css">
   <link rel="stylesheet" href="/vendor/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/vendor/css/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/products.css">
   <script src="/js/modernizr.min.js"></script>
   <script src="/vendor/js/jquery-3.1.1.min.js"></script>
 

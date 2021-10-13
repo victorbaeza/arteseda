@@ -18,9 +18,11 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\LocaleController;
-Route::get('/producto', function () {
-  return view('site.product');
+
+Route::get('/consulta', function () {
+  return view('site.query.query');
 });
+
 
 
 Route::get('test', [SiteController::class, 'test']);

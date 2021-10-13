@@ -1,0 +1,206 @@
+    .carrito {
+        box-shadow: 0 1rem 30rem hsl(0deg 20%0% / 20%);
+        padding: 0;
+        max-width: 80% !important;
+        background-color: white;
+    }
+    
+    .leftCart {
+        background-color: white;
+        padding: 5vh;
+        padding-left: 8vh;
+    }
+    
+    .rightCart {
+        background-color: #fae8e4;
+    }
+    
+    .header_cart {
+        margin: 2rem;
+    }
+    
+    .product_row_cart {
+        margin: 2rem;
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+    }
+    
+    .product_row_cart_note {
+        margin: 2rem;
+        margin-top: 8vh;
+    }
+    
+    .product_row_cart_total {
+        margin: 1rem;
+        margin-top: 5vh;
+    }
+    
+    .product_row_cart_aviso {
+        margin: 1rem;
+        margin-top: 2vh;
+    }
+    
+    .product_image_cart {
+        width: 7vh;
+    }
+    
+    .product_name_cart {
+        font-size: 1rem;
+        margin-top: 1vh;
+        font-weight: bold;
+    }
+    
+    .product__price_cart {
+        margin-top: 1vh;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .product__price_cart_total {
+        margin-top: 1vh;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .product_category_cart {
+        font-size: .9rem;
+    }
+    
+    .product_id_cart {
+        font-size: .9rem;
+    }
+    
+    .col {
+        text-align: left;
+    }
+    
+    .container_cart .card {
+        position: relative;
+        height: 10vh;
+        border-radius: 20px;
+        overflow: visible;
+        border: none !important;
+    }
+    
+    .card:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffecf6;
+        clip-path: circle(3vh at 35% 70%);
+        transition: 0.5s ease-in-out;
+    }
+    
+    .container_cart .card .imgBx {
+        z-index: 1 !important;
+        bottom: 2vh;
+        transition: 0.5s;
+    }
+    
+    .container_cart .card .contentBx {
+        position: relative;
+        transition: 1s;
+        z-index: 1;
+    }
+    
+    .rounded {
+        border-top: .5vh solid rgb(251 243 239);
+        border-radius: 5px;
+    }
+    
+    .total_cart_price,
+    .total_cart_text {
+        text-align: center;
+        vertical-align: bottom;
+    }
+    
+    .total_cart_text {
+        width: 80%;
+    }
+    
+    .total_cart_text h6,
+    .total_cart_text .form-check {
+        font-size: .9rem;
+        float: left;
+        text-align: left;
+    }
+    
+    .total_cart_price h6 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .cart_section {
+        width: 100%;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    
+    #cart_note {
+        width: 100%;
+        border: .4pt solid #dfdfdf;
+    }
+    
+    .checkout_cart {
+        background-color: #ff0081;
+        border-radius: 2vh;
+        color: white;
+        float: left;
+        font-size: 0.9rem;
+        padding: 1rem;
+        width: 15vh;
+    }
+    
+    .checkout_cart:hover {
+        background-color: #ff349a;
+    }
+    
+    .pay_cart {
+        background-color: #ffffff;
+        border-radius: 2vh;
+        color: black;
+        float: left;
+        font-size: 0.9rem;
+        padding: 1rem;
+        width: 15vh;
+        margin-bottom: 5vh;
+    }
+    
+    .pay_cart:hover {
+        background-color: #fffafa;
+    }
+    
+    .btn_sumar_item,
+    .btn_restar_item {
+        font-size: 1.6rem;
+        background-color: white;
+    }
+    
+    .cart_quantity {
+        float: left;
+        margin-left: -1.6vh;
+    }
+    
+    .remove_item {
+        float: right;
+        margin-right: 5vh;
+        color: #fae8e4;
+        cursor: pointer;
+    }
+    
+    .remove_item:hover {
+        float: right;
+        margin-right: 5vh;
+        color: #dfcac5;
+        cursor: pointer;
+    }
+    
+    .total_cart_icon {
+        text-align: center;
+        vertical-align: bottom;
+        color: #fff7f5;
+        font-size: 10rem;
+    }

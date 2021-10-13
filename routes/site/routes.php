@@ -4,36 +4,40 @@ use App\Http\Controllers\SiteController;
 
 $all_langs = Helper::getLanguages();
 
-foreach( $all_langs as $prefix ){
+foreach ($all_langs as $prefix) {
 
-   if ($prefix == 'es') $prefix = '';
-   // Route::get('/', [SiteController::class, 'index'])->name($prefix.'_home');
+    if ($prefix == 'es') $prefix = '';
+    // Route::get('/', [SiteController::class, 'index'])->name($prefix.'_home');
 
-   Route::group(['prefix' => $prefix, 'middleware' => ['setLocale','forgetLanguageParameter']], function() use ($prefix) {
+    Route::group(['prefix' => $prefix, 'middleware' => ['setLocale', 'forgetLanguageParameter']], function () use ($prefix) {
 
-         // Las URLs sin prefijo deben ir al idioma por defecto
-         if ($prefix == '') $prefix = config('app.locale');
+        // Las URLs sin prefijo deben ir al idioma por defecto
+        if ($prefix == '') $prefix = config('app.locale');
 
-         Route::get('/', [SiteController::class, 'index'])->name($prefix.'_home');
-      
-
-         // Blogs / noticias
-
-         // Productos / Catálogo
-         Route::get('/products', 'ProductController@showProductList')->name('product_list');
-         Route::prefix('products')->group(function(){
-             Route::get('/{slug}/', 'ProductController@show')->name('product.show');
-         });
-         // Contacto
-         Route::get(Lang::get('routes.contact',[], $prefix), [SiteController::class, 'getContact'])->name($prefix.'_contact');
-
-         // Sobre nosotros
-         Route::get(Lang::get('routes.about',[], $prefix), [SiteController::class, 'getAboutUs'])->name($prefix.'_aboutUs');
-
-         // Páginas legales
+        Route::get('/', [SiteController::class, 'index'])->name($prefix . '_home');
 
 
-   });
+        // Blogs / noticias
+
+        // Consulta NFC
+  
+
+
+        // Productos / Catálogo
+        Route::get('/products', 'ProductController@showProductList')->name('product_list');
+        Route::prefix('products')->group(function () {
+            Route::get('/{slug}/', 'ProductController@show')->name('product.show');
+        });
+        // Contacto
+        Route::get(Lang::get('routes.contact', [], $prefix), [SiteController::class, 'getContact'])->name($prefix . '_contact');
+
+        // Sobre nosotros
+        Route::get(Lang::get('routes.about', [], $prefix), [SiteController::class, 'getAboutUs'])->name($prefix . '_aboutUs');
+
+        // Páginas legales
+
+
+    });
 }
 
 // Rutas sin localización

@@ -2,6 +2,7 @@
 
 {{-- css --}}
 @section('extracss')
+
 @stop
 {{-- Content --}}
 @section('content')
@@ -17,115 +18,99 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .tituloBanner {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin-left: 2rem;
-            color: white;
-            font-size: 1rem;
-            margin-left: 10rem;
-        }
-
-        .titular {
-            margin-left: 10rem;
-        }
-
-        .imagenPrincipal {
-            height: 50rem;
-            background-color: #ECEAE6;
-            position: relative;
-            padding:2rem;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            display: flex;
-            align-items: center;
-        }
-
-        #owl-carousel2 {
-            display: flex;
-            justify-content: center;
-        
-        }
-        .owl-carousel{
-            width: 100%;
-            margin-right: 2rem;
-        }
-    </style>
 </head>
 
-<body style="background-color:#ECEAE6">
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal">
-        <div class="owl-carousel" id="owl-carousel2" style="z-index:1;">
-            @foreach($products as $product)
+<body style="">
+    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/inicioBanner.jpg')}});">
 
-            <div class="imagenRelacionados" data-nombre="{{$product->name}}" data-imagen="{{$product->Photos->get(1)->path}}">
-                <a href="/products/{{$product->getSlug()}}"> <img class="d-block w-100" src="{{asset('/storage/products/images/'. $product->photo_principal)}}" alt="{{$product->name}}"></a>
+        <h3 class="tituloBanner">NUESTROS PAÑUELOS</h3>
+
+    </section>
+
+    <section class="full-width full-width--image products_section">
+
+
+        <div class="row" id="cont">
+            @foreach($products as $product)
+            <div class="col-12 col-lg-2">
+                <div class="box" data-nombre="{{$product->id}}">
+
+
+                    <div class="container2">
+                        <div class="card">
+                            <div class="imgBx">
+                                <a href="/products/{{$product->getSlug()}}"><img class="product_image" src="{{asset('/storage/products/images/'. $product->photo_principal)}}"></a>
+
+                            </div>
+                            <div class="imgBx2">
+
+                                <a href="/products/{{$product->getSlug()}}"><img class="product_image_model" src="{{asset('/storage/products/images/'. $product->Photos->first()->path)}}"></a>
+                                <div class="like_btn" data-like="0">
+                                    <i class="far fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="contentBx">
+                                <h5>{{$product->name}}</h5>
+                                <div class="size">
+                                    <h6 class="product__price">{{$product->price}}€</h6>
+
+                                </div>
+                                <!--     <div class="color">
+                                        <h6>Color :</h6>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div> -->
+                             <!--    <a class="buy_product" href="#">Comprar</a> -->
+                                <a  href="#" class="cta" style="background-color: #00000000;">
+                                    <span>Comprar</span>
+                                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                        <path d="M1,5 L11,5"></path>
+                                        <polyline points="8 1 12 5 8 9"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
 
 
 
+
             @endforeach
-
-
-
-
         </div>
 
-
-
-    </section>
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta" style="padding-top:4rem;padding-bottom:4rem;">
-        <h1 class="titular">PAÑUELOS DE SEDA ARTESANALES</h1>
 
     </section>
     <script src="/vendor/js/owl.carousel.min.js"></script>
     <script>
-        $(document).ready(function() {
-            var menu = document.getElementsByClassName("menu");
-            for (i = 0; i < menu.length; i++) {
-                menu[i].classList.remove("blanco");
-                menu[i].classList.add("negro");
-                $("#logo").attr("src", "{{asset('/storage/negro.png')}}");
+        $(".box").hover(function() {
+
+            var foto = $(this).data("nombre");
+
+            if ($("#" + foto + "1").css("display") == "block") {
+
+                $("#" + foto + "1").css("display", "none");
+            } else {
+                $("#" + foto + "1").css("display", "block");
             }
+            if ($("#" + foto + "2").css("display") == "block") {
+                $("#" + foto + "2").css("display", "none");
+            } else {
+                $("#" + foto + "2").css("display", "block");
+            }
+
+
+
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            $("#owl-carousel2").owlCarousel({
-                margin: 200,
-                center:true,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    600: {
-                        items: 3,
-                        nav: true
-                    },
-                    1000: {
-                        items: 3,
-                        nav: true,
-                        loop: true,
 
-                    }
-                }
-            })
-        });
+    <script>
         window.onscroll = function() {
             myFunction()
         };
@@ -134,18 +119,50 @@
 
         var sticky = header.offsetTop;
 
+
         function myFunction() {
+            var menu = document.getElementsByClassName("menu");
 
 
             if (window.pageYOffset > sticky) {
                 header.classList.remove("absolute");
                 header.classList.add("sticky");
+                for (i = 0; i < menu.length; i++) {
+                    menu[i].classList.remove("blanco");
+                    menu[i].classList.add("negro");
+
+                }
 
             } else {
                 header.classList.remove("sticky");
                 header.classList.add("absolute");
+                for (i = 0; i < menu.length; i++) {
+                    menu[i].classList.remove("negro");
+                    menu[i].classList.add("blanco");
+
+                }
             }
         }
+    </script>
+    <script>
+        $(document).on("click", ".like_btn", function() {
+            if ($(this).data("like") == 0) {
+                $(this).html('<i class="fas fa-heart"></i>');
+                $(this).data("like", "1");
+            } else {
+                $(this).html('<i class="far fa-heart"></i>');
+                $(this).data("like", "0");
+            }
+
+        });
+        $(".like_btn").mouseenter(function() {
+            $(this).css("color", "rgb(253 196 243)");
+
+        });
+        $(".like_btn").mouseleave(function() {
+            $(this).css("color", "rgb(245 225 193)");
+
+        });
     </script>
 </body>
 

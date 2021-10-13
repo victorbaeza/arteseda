@@ -30,230 +30,13 @@
             transition: 0.5s ease-in-out;
         }
 
-        .tituloBanner {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin-left: 2rem;
-            color: white;
-            font-size: 1rem;
-            margin-left: 10rem;
-
-        }
-
-        .titular {
-            text-shadow: 5px 5px 10px #00000059;
-            width: 30rem;
-            /* font-family: "SangBleu Kingdom Light","Book Antiqua",Palatino,Georgia,serif; */
-            color: black;
-            margin-left: 10rem;
-
-            text-transform: uppercase;
-        }
-
-        .precio {
-
-            width: 30rem;
-            margin-top: 2rem;
-            color: black;
-            margin-left: 20rem;
-
-            text-transform: uppercase;
-        }
-
-        .stock {
-            font-size: 0.9rem;
-            width: 30rem;
-            color: black;
-            margin-left: 20rem;
-
-            text-transform: lowercase;
-        }
-
-        .foto {
-
-            filter: drop-shadow(-6px 6px 25px rgba(0, 0, 0, 0.5));
-        }
-
-        #imagenPrincipal {
-            height: 50vh;
-
-            object-position: center;
-        }
-
-        #imagenSecundaria {
-            margin-top: 3rem;
-            height: 70vh;
-
-        }
-
-        .envio {
-            font-size: 0.9rem;
-            width: 30rem;
-            color: black;
-            margin-left: 20rem;
-
-
-        }
-
-        #datosProducto {
-            position: absolute;
-            bottom: 5rem;
-            left: 0;
-            z-index: 6;
-        }
-
-        .carrusel {
-            object-fit: contain;
-            width: auto;
-        }
-
-        #container {
-            height: 100%;
-            width: 40%;
-            background-image: linear-gradient(to right, #ECEAE6, #ECEAE6, rgba(0, 0, 0, 0));
-            background-color: ;
-            position: absolute;
-            z-index: 6;
-            transition: 0.5s ease-in-out;
-        }
-
-        .separador {
-            position: relative;
-            z-index: 6;
-
-            background-color: white;
-            height: 7vh;
-        }
-
-        .pagina {
-
-            font-family: "Anton", Sans-serif;
-            font-size: 40rem;
-            position: absolute;
-            font-weight: bold;
-            right: 25rem;
-            bottom: 1rem;
-            color: #f0efec;
-            transition: .5s ease-in-out;
-        }
-
-        .pagina2 {
-            z-index: 2;
-            font-size: 1.5rem;
-            position: absolute;
-            font-weight: 500;
-            right: 1rem;
-            text-shadow: 5px 5px 10px #00000059;
-            bottom: 1rem;
-            transition: .5s ease-in-out;
-            text-shadow: 5px 5px 5px #0000006d;
-            /* font-family: "SangBleu Kingdom Light","Book Antiqua",Palatino,Georgia,serif; */
-            color: black;
-            margin-left: 10rem;
-
-            text-transform: uppercase;
-        }
-
-        .letfSide,
-        .rightSide {
-            height: 70vh;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .letfSide {
-            position: relative;
-            background-color: white;
-            padding-top: 2rem;
-            border-radius: 50px 0px 0px 00px;
-            box-shadow: inset 0px 9px 10px 0px rgba(0, 0, 0, 0.1);
-        }
-
-        .rightSide {
-            background-color: beige;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            transition: all 0.5s cubic-bezier(0.59, -0.18, 0.63, 1.32) 0s;
-            box-shadow: inset 0px 9px 10px 0px rgba(0, 0, 0, 0.1);
-        }
-
-
-
-        #imagenesRelacionados {
-            width: auto;
-            height: 20rem;
-            margin: 0.5rem;
-            object-fit: contain;
-        }
-
-
-        .absolute-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            height: 100%;
-            width: 100%;
-            background-position: 20%;
-            background-repeat: no-repeat;
-            background-size: contain;
-            overflow: hidden;
-        }
-
-        .home-mast {
-            height: 100%;
-        }
-
-        .home-mast__container2 {
-            display: flex;
-            height: 20rem;
-        }
-
-        .home-mast__container2>* {
-            position: relative;
-            flex-grow: 0.5;
-            padding: 1em;
-            transition: flex-grow 0.6s cubic-bezier(0.43, 0.15, 0.95, 0.12) 0.2s;
-        }
-
-        .home-mast__container2>*:hover {
-
-            flex-grow: 10;
-        }
-
-
-
-        .relacionados {
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-        }
-
-        .owl-carousel,
-        .owl-stage {
-            display: flex;
-            align-items: center;
-
-        }
-
-        #owl-carousel2 {
-            padding-left: 10rem;
-            padding-right: 10rem;
-        }
-
-        .relacionadosTitular {
-
-            margin-left: 10rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-
-        }
+    
     </style>
 </head>
 
 <body style="background-color:white">
     <!-- transform: translate3d(60rem, 0px, 0px) -->
-    <section id="seccionPrincipal" style="position:relative;z-index:0;background-color:rgb(245, 238, 223);border-radius: 0px 0px 0px 50px;box-shadow: inset 0px -9px -10px 0px rgba(0, 0, 0, 0.1);">
+    <section id="seccionPrincipal" style="">
 
 
 
@@ -271,10 +54,10 @@
 
         </div>
 
-        <h1 class="pagina">1</h1>
+        <h1 class="pagina" style="display:none">1</h1> 
         <h51 class="pagina2">1/2</h51>
         <div class="container" id="datosProducto">
-            <h1 class="titular">{{$product->Category->name}}</h1>
+
             <h1 class="titular">{{$product->name}}</h1>
             <h5 class="precio">{{$product->price}}€</h5>
             <h6 class="stock">{{$product->stock}} disponibles</h6>
@@ -307,11 +90,11 @@
             </div>
             <div class="col no-gutters">
 
-                <div class="rightSide" style=" background-image:url(http://arteseda/storage/products/images/{{$product->Photos->get(1)->path}})">
+                <div class="rightSide" style=" background-image:url(http://arteseda/storage/products/images/{{$product->Photos->get(1)->path}});background-repeat:no-repeat;background-size:cover">
 
 
                     <div class="relacionados" data-nombre="{{$productRelacionado->name}}">
-                        <div class="absolute-bg" style="display: flex;justify-content: center;align-content: center;flex-direction: column;align-items: center;background-image:'{{asset('/storage/'. $productRelacionado->photo_principal)}}'">
+                        <div class="absolute-bg" style="display: flex;justify-content: center;align-content: center;flex-direction: column;align-items: center;background-image:'{{asset('/storage/'. $productRelacionado->photo_principal)}}';background-repeat:no-repeat;background-size:cover">
                             <h3 id="bus" style="font-weight:bold;font-size:3rem;"> </h3>
                             <p class="pe"></p>
                         </div>
@@ -375,9 +158,9 @@
                 } else {
                     $(".pagina").text("1");
                     $(".pagina2").text("1/2");
-                    $("#seccionPrincipal").css("background-color", "#ECEAE6");
+                    $("#seccionPrincipal").css("background-color", "#fae8e5");
                     $(".pagina").css("color", "#f0efec");
-                    $("#container").css("background-image", "linear-gradient(to right, #ECEAE6, #ECEAE6, rgba(0, 0, 0, 0)");
+                    $("#container").css("background-image", "linear-gradient(to right, #fae8e5, #fae8e5, rgba(0, 0, 0, 0)");
                 }
 
 
@@ -399,7 +182,6 @@
             for (i = 0; i < menu.length; i++) {
                 menu[i].classList.remove("blanco");
                 menu[i].classList.add("negro");
-                $("#logo").attr("src", "{{asset('/storage/negro.png')}}");
             }
         });
     </script>
