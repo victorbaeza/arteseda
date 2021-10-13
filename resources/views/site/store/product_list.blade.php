@@ -32,7 +32,7 @@
 
         <div class="row" id="cont">
             @foreach($products as $product)
-            <div class="col-12 col-lg-2">
+            <div class="grid-r19__item col-xs-6--r19 col-md-3--r19">
                 <div class="box" data-nombre="{{$product->id}}">
 
 

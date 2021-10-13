@@ -1,6 +1,7 @@
 .carrito {
     box-shadow: 0 1rem 30rem hsl(0deg 20%0% / 20%);
     padding: 0;
+    max-width: 127vh !important;
     background-color: white;
     padding: 2.5rem 0;
 }
@@ -242,8 +243,8 @@ img {
     grid-template-columns: 0.9fr 1fr;
     margin: auto;
     padding: 2.5em 0;
-    min-width: 600px;
-    height: 70vh;
+
+
     background-color: white;
     border-radius: 5px;
 }
@@ -294,7 +295,7 @@ img {
     display: flex;
     justify-content: space-between;
     padding: 0.8em;
-    color: #e7cec8;
+    color: #ddbcb5;
 }
 
 .photo-main-4 .controls {
@@ -329,7 +330,7 @@ img {
 .photo-main-3 .front_product_img,
 .photo-main-4 .front_product_img {
     max-width: 110%;
-    filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+    filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(10px 20px 10px rgba(0, 0, 0, 0.3));
     position: absolute;
     transition: 0.5s ease-in-out;
     left: -3.5em;

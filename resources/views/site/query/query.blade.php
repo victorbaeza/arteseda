@@ -64,7 +64,7 @@
 		</div>
         <hr class="">
 		<div class="price">
-			<span>350.00</span>€
+			<span>350.00€</span>
 		</div>
         <div class="description">
 			<h3>Descripción</h3>
