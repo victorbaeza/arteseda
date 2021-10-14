@@ -21,7 +21,7 @@
 </head>
 
 <body style="">
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpeg')}});">
+    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpg')}});">
 
         <h3 class="tituloBanner">NUESTROS PAÑUELOS</h3>
 
@@ -65,7 +65,7 @@
                                     </div> -->
                                 <!--    <a class="buy_product" href="#">Comprar</a> -->
 
-                                <div>
+                                <div class="btn_comprar">
                                     <a href="#" class="cta" style="background-color: #00000000;">
                                         <span>Comprar</span>
                                         <svg width="13px" height="10px" viewBox="0 0 13 10">
