@@ -6,13 +6,15 @@
         z-index:10;
         background-color: white;
         transition: 0.5s ease-in-out;
+        box-shadow: 0rem 4px 1rem 2px #00000042;
     }
 
     .absolute {
         position: absolute;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: #00000052;
         transition: 0.5s ease-in-out;
+        box-shadow: 0rem 4px 1rem 2px #00000042;
     }
 
     .blanco {
@@ -31,7 +33,7 @@
     }
 
     .menuSocial {
-        color: #444;
+        color:white;
 
     }
 
@@ -47,18 +49,20 @@
 <div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left:10rem;
+    <nav class="navbar navbar-expand-lg navbar-light" style="padding-left:10rem;
 padding-right:10rem;
 height:2rem;
 z-index:10;
+background-color:#73364a!important;
+
 ">
-        <a class="navbar-brand" href="#" style="font-size:1rem">MenuIdioma</a>
+        <a class="navbar-brand" href="#" style="font-size:1rem;color:white">MenuIdioma</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto" >
 
             </ul>
          
@@ -77,7 +81,7 @@ z-index:10;
     </nav>
     <nav class="navbar navbar-expand-lg absolute" id="header" style="padding-left:10rem;padding-right:10rem;z-index:10;
 width: 100%;">
-        <img id="logo" src="{{asset('/storage/logoArteseda.png')}}">
+        <img id="logo" src="{{asset('/storage/logoarteseda_pwer.png')}}">
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
