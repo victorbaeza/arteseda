@@ -44,7 +44,7 @@
 
     #logoFooter {
         transition: 0.5s ease-in-out;
-        width: 17rem;
+        width: 17vh;
         height: auto;
         margin-left: -1rem;
         margin-right: 2rem;
@@ -54,10 +54,11 @@
     .sociales,
     .divLogo {
 
-
+  
         display: flex;
 
-        justify-content: center;
+ 
+        text-align: center;
     }
 </style>
 
@@ -150,8 +151,7 @@
                     <!-- Twitter -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
 
-                    <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        
 
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
@@ -159,8 +159,6 @@
                     <!-- Linkedin -->
                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
 
-                    <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
                 </div>
                 <div class="divLogo">
                     <img id="logoFooter" src="{{asset('/storage/blanco2.png')}}">

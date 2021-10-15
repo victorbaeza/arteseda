@@ -3,6 +3,7 @@
 {{-- css --}}
 @section('extracss')
 <link rel="stylesheet" type="text/css" href="/css/cart.css">
+<link rel="stylesheet" type="text/css" href="/css/products.css">
 <style>
     .centroFondo {
         background-color: #fdf5f2;

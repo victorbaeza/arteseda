@@ -2,35 +2,16 @@
 
 {{-- css --}}
 @section('extracss')
-
+<link rel="stylesheet" type="text/css" href="/css/index.css">
 <style>
     .titular {
         margin-left: 10rem;
-        text-shadow: -1px 5px 6px #00000091;
+
     }
-
-
-
 
     .foto {
         height: 30vh;
         object-fit: cover;
-    }
-
-
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-    }
-
-    html,
-    body {
-        margin: 0;
-        background: white;
-        font-family: "Montserrat", helvetica, arial, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
     }
 
     .link {
@@ -45,7 +26,7 @@
         position: relative;
         display: block;
         width: 50rem;
-        height: 350px;
+
         margin-top: 10vh;
         overflow: hidden;
         border-radius: 10px;
@@ -197,7 +178,7 @@
         }
 
         .info_section {
-            background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
+            background: linear-gradient(to top, white 50%, transparent 100%);
             display: inline-grid;
         }
     }
@@ -224,6 +205,26 @@
         position: relative;
         width: 100%;
         justify-content: space-evenly;
+        margin-left: 12vh;
+        margin-right: 12vh;
+
+
+    }
+
+    #logoIndex {
+        width: 50vh;
+    }
+
+    .tituloIndex {
+        text-align: center;
+        font-size: 8vh;
+        margin-top: -3vh;
+
+    }
+
+    .textoIndex {
+        text-align: center;
+        font-size: 3vh;
 
     }
 </style>
@@ -236,32 +237,33 @@
 
 
 
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpg')}});">
-
-        <h3 class="tituloBanner">NUESTROS PAÑUELOS</h3>
-
-    </section>
-
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta" style="padding-top:4rem;padding-bottom:4rem;">
-        <h1 class="titular">NUESTRAS COLECCIONES</h1>
-
-        </div>
-
-    </section>
-    <section style="display:flex;justify-content:center;padding-top:4rem;padding-bottom:4rem;">
-
-        <!--   <div class="owl-carousel" id="owl-carousel" style="z-index:1;">
-
-                <div class="primera"> <img class="carrusel foto" id="" src="http://arteseda/storage/products/images/1_Segunda.webp" style="" alt=""> </div>
-
-                <div> <img class="carrusel foto" id="imagenSecundaria2" style="" style="z-index:1" src="http://arteseda/storage/products/images/1_Segunda.webp" alt=""> </div>
+<section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpeg')}});background-position: inherit;background-size: cover;">
 
 
 
-            </div> -->
-        <div class="flexbox">
+</section>
 
+<section class="full-width full-width--image mb-5-r19 mt-5-r19 mb-md-7-r19 single-cta" style="display:flex;justify-content:center;padding-top:4rem;padding-bottom:4rem;background-image: url(http://arteseda/storage/fondocarrito2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;">
 
+    <div style="text-align:center">
+        <img id="logoIndex" src="{{asset('/storage/logoarteseda_pwer.png')}}">
+        <h3 class="tituloIndex"><strong>arte</strong>seda</h3>
+        <h3 class="textoIndex">PAÑUELOS DE <strong>SEDA</strong> ARTESANALES</h3>
+    </div>
+    </div>
+</section>
+
+    <section class="category-section ">
+
+    
+
+   
+       
+ 
+        <div class="owl-carousel" id="owl-carousel-index" style="z-index:1;">
+        
             <div class="movie_card" id="bright">
                 <div class="info_section">
                     <div class="movie_header">
@@ -348,7 +350,9 @@
                 </div>
                 <div class="blur_back bright_back_4"></div>
             </div>
+
         </div>
+
     </section>
     <script src="/vendor/js/owl.carousel.min.js"></script>
     <script>
@@ -387,18 +391,33 @@
     </script>
     <script>
         $(document).ready(function() {
-            $("#owl-carousel").owlCarousel({
-                center: true,
+            $("#owl-carousel-index").owlCarousel({
+
                 autoplay: true,
                 loop: true,
-                margin: 200,
-                items: 3,
-
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false,
+                        center: true
+                    },
+                    600: {
+                        items: 1,
+                        nav: false,
+                        center: true
+                    },
+                    1025: {
+                        items: 3,
+                        nav: false,
+                    }
+                }
 
             })
         });
     </script>
 
 
-</html>
-@stop
+    </html>
+    @stop

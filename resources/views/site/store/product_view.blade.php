@@ -2,6 +2,7 @@
 
 {{-- css --}}
 @section('extracss')
+<link rel="stylesheet" type="text/css" href="/css/products.css">
 @stop
 {{-- Content --}}
 @section('content')

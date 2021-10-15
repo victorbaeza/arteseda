@@ -46,7 +46,7 @@
   <link rel="stylesheet" media="screen" href="/css/main.css">
   <link rel="stylesheet" href="/vendor/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/vendor/css/owl.theme.default.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/products.css">
+
   <script src="/js/modernizr.min.js"></script>
   <script src="/vendor/js/jquery-3.1.1.min.js"></script>
 

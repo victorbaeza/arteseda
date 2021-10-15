@@ -7,6 +7,7 @@
 {{-- css --}}
 @section('extracss')
 <link rel="stylesheet" type="text/css" href="/css/query.css">
+<link rel="stylesheet" type="text/css" href="/css/products.css">
 <style>
     .centroFondo {
         background-color: #fdf5f2;

@@ -49,8 +49,8 @@
 <div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="padding-left:10rem;
-padding-right:10rem;
+    <nav class="navbar navbar-expand-lg navbar-light" style="padding-left:12vh;
+padding-right:12vh;
 height:2rem;
 z-index:10;
 background-color:#73364a!important;
@@ -79,14 +79,14 @@ background-color:#73364a!important;
                <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;"><i class="fab fa-linkedin"></i></i></a>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg absolute" id="header" style="padding-left:10rem;padding-right:10rem;z-index:10;
+    <nav class="navbar navbar-expand-lg absolute" id="header" style="padding-left:12vh;padding-right:12vh;z-index:10;
 width: 100%;">
         <img id="logo" src="{{asset('/storage/logoarteseda_pwer.png')}}">
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link menu blanco" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link menu blanco" href="/">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu blanco" href="/products">Productos</a>

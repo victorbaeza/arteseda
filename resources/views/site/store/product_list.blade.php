@@ -2,32 +2,19 @@
 
 {{-- css --}}
 @section('extracss')
-
+<link rel="stylesheet" type="text/css" href="/css/products.css">
 @stop
 {{-- Content --}}
 @section('content')
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpeg')}});">
 
-    <title>Inicio</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
-</head>
-
-<body style="">
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpg')}});">
-
-        <h3 class="tituloBanner">NUESTROS PAÑUELOS</h3>
+        <h3 class="tituloBanner">NOMBRE COLECCIÓN</h3>
 
     </section>
-
-    <section class="full-width full-width--image products_section">
+ 
+    <section class="full-width full-width--image products_section" >
 
 
         <div class="row" id="cont">
@@ -168,7 +155,5 @@
 
         });
     </script>
-</body>
 
-</html>
 @stop
