@@ -181,6 +181,7 @@
         $(".total_price_cart").css("font-weight","bold");
     }
     $(document).ready(function() {
+        $("#logo").attr("src","http://arteseda/storage/logo_tipo.png")
         var menu = document.getElementsByClassName("menu");
         for (i = 0; i < menu.length; i++) {
             menu[i].classList.add("negro");

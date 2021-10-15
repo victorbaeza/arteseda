@@ -3,7 +3,7 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index:10;
+        z-index: 10;
         background-color: white;
         transition: 0.5s ease-in-out;
         box-shadow: 0rem 4px 1rem 2px #00000042;
@@ -12,9 +12,7 @@
     .absolute {
         position: absolute;
         width: 100%;
-        background-color: #00000052;
         transition: 0.5s ease-in-out;
-        box-shadow: 0rem 4px 1rem 2px #00000042;
     }
 
     .blanco {
@@ -33,7 +31,7 @@
     }
 
     .menuSocial {
-        color:white;
+        color: white;
 
     }
 
@@ -42,8 +40,12 @@
         width: 10rem;
         height: auto;
         margin-left: -1rem;
-        margin-right: 2rem;
+        margin-bottom: -1vh;
         filter: drop-shadow(-6px 6px 5px rgba(0, 0, 0, 0.4));
+    }
+
+    #header {
+        height: 6rem;
     }
 </style>
 <div>
@@ -62,26 +64,26 @@ background-color:#73364a!important;
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" >
+            <ul class="navbar-nav mr-auto">
 
             </ul>
-         
+
             <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;font-size:0.9rem"><i class="fas fa-phone-square-alt"></i> 963728147 </a>
             <span> |</span>
-               <!-- Facebook -->
+            <!-- Facebook -->
             <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;"><i class="fab fa-facebook-square"></i></a>
 
             <!-- Instagram -->
             <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;"> <i class="fab fa-instagram"></i></a>
             <!-- Twitter -->
             <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;"><i class="fab fa-twitter-square"></i></a>
-               <!-- linkedin -->
-               <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;"><i class="fab fa-linkedin"></i></i></a>
+            <!-- linkedin -->
+            <a class="btn  btn-floating m-1 menuSocial " href="#!" role="button" style="font-weight:100px;"><i class="fab fa-linkedin"></i></i></a>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg absolute" id="header" style="padding-left:12vh;padding-right:12vh;z-index:10;
 width: 100%;">
-        <img id="logo" src="{{asset('/storage/logoarteseda_pwer.png')}}">
+        <img id="logo" src="{{asset('/storage/logo_tipo_blanco.png')}}">
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">

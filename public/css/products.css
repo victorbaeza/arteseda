@@ -288,6 +288,8 @@ body {
 .tituloBanner {
     position: absolute;
     bottom: 0;
+    font-family: 'Allura';
+    font-weight: 900;
     left: 0;
     margin-left: 2rem;
     color: white;

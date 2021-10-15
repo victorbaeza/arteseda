@@ -722,6 +722,9 @@ a {
     display: flex;
     justify-content: center;
     background-color: #fbfbfb;
-    ;
-    ;
+
+}
+#owl-carousel-index .owl-item{
+    padding: 4rem;
+
 }

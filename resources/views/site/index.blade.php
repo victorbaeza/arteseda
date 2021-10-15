@@ -57,7 +57,6 @@
 
     .movie_card .info_section .movie_header h1 {
         color: black;
-        font-weight: 400;
     }
 
     .movie_card .info_section .movie_header h4 {
@@ -227,6 +226,10 @@
         font-size: 3vh;
 
     }
+    .collection_name{
+        font-family: 'Allura';
+        font-weight: 900;
+    }
 </style>
 @stop
 {{-- Content --}}
@@ -237,7 +240,7 @@
 
 
 
-<section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpeg')}});background-position: inherit;background-size: cover;">
+<section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpg')}});background-position: inherit;background-size: cover;">
 
 
 
@@ -248,8 +251,10 @@
     background-size: 100% 100%;">
 
     <div style="text-align:center">
-        <img id="logoIndex" src="{{asset('/storage/logoarteseda_pwer.png')}}">
+       <!--  <img id="logoIndex" src="{{asset('/storage/logoarteseda_pwer.png')}}">
         <h3 class="tituloIndex"><strong>arte</strong>seda</h3>
+        <h3 class="textoIndex">PAÑUELOS DE <strong>SEDA</strong> ARTESANALES</h3> -->
+        <img id="logoIndex" src="{{asset('/storage/logo_tipo.png')}}">
         <h3 class="textoIndex">PAÑUELOS DE <strong>SEDA</strong> ARTESANALES</h3>
     </div>
     </div>
@@ -267,7 +272,7 @@
             <div class="movie_card" id="bright">
                 <div class="info_section">
                     <div class="movie_header">
-                        <h1>Colección 1</h1>
+                        <h1 class="collection_name">Colección 1</h1>
                         <h4>2022, Primavera</h4>
                         <span class="minutes">Característica</span>
                         <p class="type">Palabra, Palabra, Palabra</p>
@@ -289,7 +294,7 @@
             <div class="movie_card" id="bright_2">
                 <div class="info_section">
                     <div class="movie_header">
-                        <h1>Colección 2</h1>
+                    <h1 class="collection_name">Colección 2</h1>
                         <h4>2022, Otoño</h4>
                         <span class="minutes">Característica</span>
                         <p class="type">Palabra, Palabra, Palabra</p>
@@ -310,7 +315,7 @@
             <div class="movie_card" id="bright">
                 <div class="info_section">
                     <div class="movie_header">
-                        <h1>Colección 3</h1>
+                    <h1 class="collection_name">Colección 3</h1>
                         <h4>2022, Verano</h4>
                         <span class="minutes">Característica</span>
                         <p class="type">Palabra, Palabra, Palabra</p>
@@ -332,7 +337,7 @@
             <div class="movie_card" id="bright_2">
                 <div class="info_section">
                     <div class="movie_header">
-                        <h1>Colección 4</h1>
+                    <h1 class="collection_name">Colección 4</h1>
                         <h4>2022, Invierno</h4>
                         <span class="minutes">Característica</span>
                         <p class="type">Palabra, Palabra, Palabra</p>
@@ -372,6 +377,7 @@
             if (window.pageYOffset > sticky) {
                 header.classList.remove("absolute");
                 header.classList.add("sticky");
+                $("#logo").attr("src","http://arteseda/storage/logo_tipo.png")
                 for (i = 0; i < menu.length; i++) {
                     menu[i].classList.remove("blanco");
                     menu[i].classList.add("negro");
@@ -381,6 +387,7 @@
             } else {
                 header.classList.remove("sticky");
                 header.classList.add("absolute");
+                $("#logo").attr("src","http://arteseda/storage/logo_tipo_blanco.png")
                 for (i = 0; i < menu.length; i++) {
                     menu[i].classList.remove("negro");
                     menu[i].classList.add("blanco");
@@ -409,7 +416,7 @@
                         center: true
                     },
                     1025: {
-                        items: 3,
+                        items: 2,
                         nav: false,
                     }
                 }

@@ -8,9 +8,9 @@
 @section('content')
 <!DOCTYPE html>
 
-    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpeg')}});">
+    <section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal" style="background-image:url({{url('/storage/fondo_products.jpg')}});">
 
-        <h3 class="tituloBanner">NOMBRE COLECCIÓN</h3>
+        <h3 class="tituloBanner">Nombre Colección</h3>
 
     </section>
  

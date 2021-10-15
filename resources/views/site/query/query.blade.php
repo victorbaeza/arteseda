@@ -114,6 +114,7 @@
 
     $(document).ready(function() {
         var menu = document.getElementsByClassName("menu");
+        $("#logo").attr("src","http://arteseda/storage/logo_tipo.png")
         for (i = 0; i < menu.length; i++) {
             menu[i].classList.add("negro");
 
