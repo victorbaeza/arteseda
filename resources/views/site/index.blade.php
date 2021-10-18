@@ -15,7 +15,7 @@
 
 
 
-<section class="imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpeg')}});background-position: inherit;background-size: cover;">
+<section class="imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpg')}});background-position: inherit;background-size: cover;">
 
     <div class="section_cut" style="background-image: url(http://arteseda/storage/fondocarrito2.jpg);  background-repeat: no-repeat;
     background-size: 100% 100%;">

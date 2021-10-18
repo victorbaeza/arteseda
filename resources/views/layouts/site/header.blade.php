@@ -49,7 +49,7 @@
     .header_search {
         width: 80%;
         border: none;
-        border-bottom: 0.2pt solid grey;
+        border-bottom: 0.2pt solid white;
         font-style: oblique;
         font-size: 1.4rem;
         color: white;
@@ -73,7 +73,9 @@
         padding: 2rem;
 
     }
-
+    .navbar{
+        padding:0 !important;
+    }
 
     input[type=search] {
         background-color: #ffffff00;
@@ -101,6 +103,14 @@
         color: white;
         opacity: 1;
 }
+.menu{
+    font-weight: 600;
+}
+.container_header,.container_busqueda{
+    
+    max-width: 75%;
+
+}
 </style>
 <div>
 
@@ -111,7 +121,7 @@ z-index:10;
 background-color:#73364a!important;
 
 ">
-        <div class="container">
+        <div class="container container_header">
 
 
             <a class="navbar-brand" href="#" style="font-size:1rem;color:white">MenuIdioma</a>
@@ -141,7 +151,7 @@ background-color:#73364a!important;
     <nav class="navbar navbar-expand-lg absolute" id="header" style="z-index:10;    padding: 0;
 width: 100%;    display: flow-root;">
 
-        <div class="container">
+        <div class="container container_header">
             <img id="logo" src="{{asset('/storage/logo_tipo_blanco.png')}}">
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -180,7 +190,7 @@ width: 100%;    display: flow-root;">
         </div>
 
         <div class="container container_search" style="display:none">
-            <div class="container">
+            <div class="container container_busqueda">
                 <input class="header_search" type="search" placeholder="¿Qué estás buscando?">
                 <span class="close_search">X</span>
 

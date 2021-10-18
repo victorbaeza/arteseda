@@ -39,8 +39,8 @@
         
 			<div class="photo-main">
 				<div class="controls">
-                <i class="fas fa-share-alt"style="font-size: 1.4rem;"></i>
-                    <i class="far fa-heart" style="font-size: 1.4rem;"></i>
+                <i class="fas fa-share-alt control_icon"style="font-size: 1.4rem;"></i>
+                    <i class="far fa-heart control_icon" style="font-size: 1.4rem;"></i>
 				</div>
 				<img class="front_product_img" src="http://arteseda/storage/products/images/1_rojo.png"alt="green apple slice">
                 <img class="front_product_img-in" src=""alt="green apple slice">
@@ -89,13 +89,7 @@
 		<div class="description">
 			<h3>Número</h3>
 			<ul>
-				<li>Pañuelo nº#</li>
-			</ul>
-		</div>
-        <div class="description">
-			<h3>Tirada</h3>
-			<ul>
-				<li>x Pañuelos Producidos</li>
+				<li>Pañuelo nº# de x pañuelos</li>
 			</ul>
 		</div>
         <div class="description">

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 .container2 {
     position: relative;
-    margin-bottom: 3rem;
+
 }
 
 .container2 .card {
@@ -124,6 +124,7 @@
     top: 36%;
     left: 50%;
     width: 23vh;
+    border: 5px solid #e7e7e7;
     transform: translate(-50%, -50%);
     opacity: 1;
 }
@@ -290,7 +291,7 @@ body {
     position: absolute;
     bottom: 0;
     font-family: 'Allura';
-    font-weight: 900;
+    font-weight:500;
     left: 0;
     margin-left: 2rem;
     color: white;
@@ -345,6 +346,7 @@ body {
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
+    margin-bottom: 2rem;
 }
 
 .box>img {

@@ -397,6 +397,10 @@ img {
     font-size: 1.5em;
     font-family: 'Allura';
     font-size: 2.5rem;
+    filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 0.4));
+}
+.control_icon{
+
 }
 
 .title span {
@@ -449,17 +453,20 @@ img {
 
 .description h3 {
     margin-bottom: 1em;
+    font-weight:900;
 }
 
 .description ul {
     font-size: 0.8em;
     list-style: disc;
     margin-left: 1em;
+    
 }
 
 .description li {
     margin-bottom: 0.5em;
     text-align: justify;
+  
 }
 
 .buy--btn {

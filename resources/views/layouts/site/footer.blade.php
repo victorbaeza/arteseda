@@ -2,10 +2,10 @@
 <style>
     #footer:before {
         content: "";
-        background-image:url({{url('/storage/seda.jpg')}});
+        background-image:url({{url('/storage/footer_fondo.webp')}});
         -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-    background-position:10%;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
     height: 100%;
     width: 100%;
     background-color: #bb1654;
-    opacity: 0.2;
+    opacity: 0.15;
     transition: opacity 0.4s ease-in-out;
 
     }
@@ -57,6 +57,9 @@
 
  
         text-align: center;
+    } 
+    .container_footer{
+        max-width: 75%;
     }
 </style>
 
@@ -64,7 +67,7 @@
 
 <footer class="" id="footer" style=>
     <!-- Grid container -->
-    <div class="container" style="padding-top:7em;padding-bottom:7rem">
+    <div class="container container_footer" style="padding-top:7em;padding-bottom:7rem">
         <div class="row">
             <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Products</h5>

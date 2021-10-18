@@ -75,6 +75,64 @@
 
             @endforeach
         </div>
+        <div class="row" id="cont">
+            @foreach($products as $product)
+            <div class="grid-r19__item col-xs-6--r19 col-md-3--r19">
+                <div class="box" data-nombre="{{$product->id}}">
+
+
+                    <div class="container2">
+                        <div class="card">
+                            <div class="imgBx">
+                                <a href="/products/{{$product->getSlug()}}"><img class="product_image" src="{{asset('/storage/products/images/'. $product->photo_principal)}}"></a>
+
+                            </div>
+                            <div class="imgBx2">
+
+                                <a href="/products/{{$product->getSlug()}}"><img class="product_image_model" src="{{asset('/storage/products/images/'. $product->Photos->first()->path)}}"></a>
+                                <div class="like_btn" data-like="0">
+                                    <i class="far fa-heart"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="contentBx">
+                                <h5>{{$product->name}}</h5>
+                                <div class="size">
+                                    <h6 class="product__price">{{$product->price}}€</h6>
+
+                                </div>
+                                <!--     <div class="color">
+                                        <h6>Color :</h6>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div> -->
+                                <!--    <a class="buy_product" href="#">Comprar</a> -->
+
+                                <div class="btn_comprar">
+                                    <a href="#" class="cta" style="background-color: #00000000;">
+                                        <span>Comprar</span>
+                                        <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                            <path d="M1,5 L11,5"></path>
+                                            <polyline points="8 1 12 5 8 9"></polyline>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            @endforeach
+        </div>
 
 
     </section>
