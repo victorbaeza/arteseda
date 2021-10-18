@@ -38,9 +38,7 @@
         margin-bottom: 2rem;
     }
 
-    .container {
-        max-width: 100vh;
-    }
+  
 
     #logoFooter {
         transition: 0.5s ease-in-out;

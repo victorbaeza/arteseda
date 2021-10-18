@@ -4,232 +4,7 @@
 @section('extracss')
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 <style>
-    .titular {
-        margin-left: 10rem;
-
-    }
-
-    .foto {
-        height: 30vh;
-        object-fit: cover;
-    }
-
-    .link {
-        display: block;
-        text-align: center;
-        color: #777;
-        text-decoration: none;
-        padding: 10px;
-    }
-
-    .movie_card {
-        position: relative;
-        display: block;
-        width: 50rem;
-
-        margin-top: 10vh;
-        overflow: hidden;
-        border-radius: 10px;
-        transition: all 0.4s;
-        box-shadow: 0px 0px 19px 4px rgb(0 0 0 / 20%)
-    }
-
-    .movie_card:hover {
-        transform: scale(1.02);
-        box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
-        transition: all 0.4s;
-    }
-
-    .movie_card .info_section {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-blend-mode: multiply;
-        z-index: 2;
-        border-radius: 10px;
-    }
-
-    .movie_card .info_section .movie_header {
-        position: relative;
-        padding: 25px;
-        height: 40%;
-    }
-
-    .movie_card .info_section .movie_header h1 {
-        color: black;
-    }
-
-    .movie_card .info_section .movie_header h4 {
-        color: #555;
-        font-weight: 400;
-    }
-
-    .movie_card .info_section .movie_header .minutes {
-        display: inline-block;
-        margin-top: 15px;
-        color: #555;
-        padding: 5px;
-        border-radius: 5px;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .movie_card .info_section .movie_header .type {
-        display: inline-block;
-        color: #959595;
-        margin-left: 10px;
-    }
-
-    .movie_card .info_section .movie_header .locandina {
-        position: relative;
-        float: left;
-        margin-right: 20px;
-        height: 120px;
-        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
-    }
-
-    .movie_card .info_section .movie_desc {
-        padding: 25px;
-        height: 50%;
-    }
-
-    .movie_card .info_section .movie_desc .text {
-        color: #545454;
-    }
-
-    .movie_card .info_section .movie_social {
-        height: 10%;
-        padding-left: 15px;
-        padding-bottom: 20px;
-    }
-
-    .movie_card .info_section .movie_social ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .movie_card .info_section .movie_social ul li {
-        display: inline-block;
-        color: rgba(0, 0, 0, 0.3);
-        transition: color 0.3s;
-        transition-delay: 0.15s;
-        margin: 0 10px;
-    }
-
-    .movie_card .info_section .movie_social ul li:hover {
-        transition: color 0.3s;
-        color: rgba(0, 0, 0, 0.7);
-    }
-
-    .movie_card .info_section .movie_social ul li i {
-        font-size: 19px;
-        cursor: pointer;
-    }
-
-    .movie_card .blur_back {
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        height: 100%;
-        right: 0;
-        background-size: cover;
-        border-radius: 11px;
-    }
-
-    @media screen and (min-width: 768px) {
-        .movie_header {
-            width: 65%;
-        }
-
-        .movie_desc {
-            width: 50%;
-        }
-
-        .info_section {
-            background: linear-gradient(to right, white 50%, transparent 100%);
-        }
-
-        .blur_back {
-            width: 80%;
-            background-position: -100% 10% !important;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .movie_card {
-            width: 95%;
-
-            min-height: 350px;
-            height: auto;
-        }
-
-        .blur_back {
-            width: 100%;
-            background-position: 50% 50% !important;
-        }
-
-        .movie_header {
-            width: 100%;
-            margin-top: 85px;
-        }
-
-        .movie_desc {
-            width: 100%;
-        }
-
-        .info_section {
-            background: linear-gradient(to top, white 50%, transparent 100%);
-            display: inline-grid;
-        }
-    }
-
-    .bright_back {
-        background: url("http://arteseda/storage/products/images/1_Segunda.webp");
-    }
-
-    .bright_back_2 {
-        background: url("http://arteseda/storage/products/images/2_Segunda.webp");
-    }
-
-    .bright_back_3 {
-        background: url("http://arteseda/storage/products/images/3_Segunda.webp");
-    }
-
-    .bright_back_4 {
-        background: url("http://arteseda/storage/products/images/4_Segunda.webp");
-    }
-
-    .flexbox {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        width: 100%;
-        justify-content: space-evenly;
-        margin-left: 12vh;
-        margin-right: 12vh;
-
-
-    }
-
-    #logoIndex {
-        width: 50vh;
-    }
-
-    .tituloIndex {
-        text-align: center;
-        font-size: 8vh;
-        margin-top: -3vh;
-
-    }
-
-    .textoIndex {
-        text-align: center;
-        font-size: 3vh;
-
-    }
-    .collection_name{
-        font-family: 'Allura';
-        font-weight: 900;
-    }
+  
 </style>
 @stop
 {{-- Content --}}
@@ -240,8 +15,12 @@
 
 
 
-<section class="full-width full-width--image mb-5-r19 mb-md-7-r19 single-cta imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpg')}});background-position: inherit;background-size: cover;">
+<section class="imagenPrincipal_index" style="background-image:url({{url('/storage/fondo_products.jpeg')}});background-position: inherit;background-size: cover;">
 
+    <div class="section_cut" style="background-image: url(http://arteseda/storage/fondocarrito2.jpg);  background-repeat: no-repeat;
+    background-size: 100% 100%;">
+
+    </div>
 
 
 </section>
@@ -254,8 +33,8 @@
        <!--  <img id="logoIndex" src="{{asset('/storage/logoarteseda_pwer.png')}}">
         <h3 class="tituloIndex"><strong>arte</strong>seda</h3>
         <h3 class="textoIndex">PAÑUELOS DE <strong>SEDA</strong> ARTESANALES</h3> -->
-        <img id="logoIndex" src="{{asset('/storage/logo_tipo.png')}}">
-        <h3 class="textoIndex">PAÑUELOS DE <strong>SEDA</strong> ARTESANALES</h3>
+        <img id="logoIndex" src="{{asset('/storage/logo_tipo_2.png')}}">
+        <h3 class="textoIndex">pañuelos de <strong>seda</strong> artesanales</h3>
     </div>
     </div>
 </section>
@@ -377,7 +156,10 @@
             if (window.pageYOffset > sticky) {
                 header.classList.remove("absolute");
                 header.classList.add("sticky");
-                $("#logo").attr("src","http://arteseda/storage/logo_tipo.png")
+                $("#logo").attr("src","http://arteseda/storage/logo_tipo_2.png");
+                $(".header_search").addClass("header_search_sticky");
+                $(".header_search").removeClass("header_search");
+                $(".close_search").css("color","black");
                 for (i = 0; i < menu.length; i++) {
                     menu[i].classList.remove("blanco");
                     menu[i].classList.add("negro");
@@ -387,7 +169,10 @@
             } else {
                 header.classList.remove("sticky");
                 header.classList.add("absolute");
-                $("#logo").attr("src","http://arteseda/storage/logo_tipo_blanco.png")
+                $("#logo").attr("src","http://arteseda/storage/logo_tipo_blanco.png");
+                $(".header_search_sticky").addClass("header_search");
+                $(".close_search").css("color","white");
+                $(".header_search_sticky").removeClass("header_search_sticky");
                 for (i = 0; i < menu.length; i++) {
                     menu[i].classList.remove("negro");
                     menu[i].classList.add("blanco");
@@ -399,10 +184,10 @@
     <script>
         $(document).ready(function() {
             $("#owl-carousel-index").owlCarousel({
-
+                nav: false,
                 autoplay: true,
                 loop: true,
-                margin: 10,
+                margin: 30,
                 responsiveClass: true,
                 responsive: {
                     0: {
